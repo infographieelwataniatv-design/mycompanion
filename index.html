@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#111019"><meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="manifest" href="manifest.json"><link rel="stylesheet" href="style.css">
+<title>MyCompanion</title>
+</head>
+<body>
+<div class="app">
+  <header><div class="brand"><span class="orb">✦</span><div><b>MyCompanion</b><small>Ton univers IA</small></div></div><button id="newChar" class="iconbtn">＋</button></header>
+  <main>
+    <section id="home">
+      <div class="hero"><p class="eyebrow">TON ESPACE PERSONNEL</p><h1>Qui veux-tu<br><em>rencontrer ?</em></h1><p>Choisis un personnage ou crée le tien.</p></div>
+      <div class="sectionhead"><h2>Mes personnages</h2><span id="count">0</span></div>
+      <div id="characters" class="characters"></div>
+    </section>
+    <section id="chat" hidden>
+      <div class="chathead"><button id="back" class="iconbtn">‹</button><div id="chatAvatar" class="avatar small">✦</div><div class="chatname"><b id="chatName">Personnage</b><small id="chatDesc">En ligne</small></div><button id="clearChat" class="iconbtn">⋯</button></div>
+      <div id="messages" class="messages"></div>
+      <form id="chatForm" class="composer"><textarea id="prompt" rows="1" placeholder="Écris ton message…" required></textarea><button type="submit">➤</button></form>
+      <p class="fineprint">Les réponses sont générées par un service IA externe. Évite de partager des informations sensibles.</p>
+    </section>
+  </main>
+</div>
+<dialog id="creator">
+<form method="dialog" id="creatorForm">
+<div class="modalhead"><h2>Créer un personnage</h2><button class="iconbtn" value="cancel">✕</button></div>
+<label>Nom<input id="cName" maxlength="35" placeholder="Ex. Lina" required></label>
+<label>Courte description<input id="cDesc" maxlength="80" placeholder="Ex. Curieuse, drôle et spontanée"></label>
+<label>Personnalité et contexte<textarea id="cBio" rows="4" placeholder="Décris sa personnalité, son histoire et sa façon de parler…"></textarea></label>
+<label>Couleur de l'avatar<select id="cColor"><option value="#7656e8">Violet</option><option value="#d36b91">Rose</option><option value="#247e87">Turquoise</option><option value="#b07842">Ambre</option></select></label>
+<button class="primary" type="submit">Créer le personnage</button>
+</form>
+</dialog>
+<script src="app.js"></script>
+</body></html>
